@@ -5,7 +5,7 @@
 #define MAXBLANKLEN 10
 
 int println(int);
-int number(char *arg);
+int number(char *arg, int deft);
 int power(int base, int e);
 
 int main(int argc, char *argv[]) {
@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
   if(argc == 1) {
     blankn = DEFAULTBLANKN;
   } else {
-    blankn = number(argv[1]);
+    blankn = number(argv[1], DEFAULTBLANKN);
   }
   while(println(blankn) > 0)
     ;
@@ -40,12 +40,12 @@ int println(int blankn) {
   return j;
 }
 
-int number(char *arg) {
+int number(char *arg, int deft) {
   char numbers[MAXBLANKLEN];
   int i, r, l;
   i = r = l = 0;
   if(strlen(arg) == 0) {
-    return DEFAULTBLANKN;
+    return deft;
   }
   for(i = 0; i < MAXBLANKLEN && arg[i] <= '9' && arg[i] >= '0'; i++)
     numbers[i] = arg[i];
