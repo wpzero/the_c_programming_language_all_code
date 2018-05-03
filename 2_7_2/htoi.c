@@ -37,29 +37,23 @@ int hctoi(char c) {
     return c - '0';
   switch (c) {
   case 'A':
-  case 'a': {
+  case 'a':
     return 10;
-  }
   case 'B':
-  case 'b': {
+  case 'b':
     return 11;
-  }
   case 'C':
-  case 'c': {
+  case 'c':
     return 12;
-  }
   case 'D':
-  case 'd': {
+  case 'd':
     return 13;
-  }
   case 'E':
-  case 'e': {
+  case 'e':
     return 14;
-  }
   case 'F':
-  case 'f': {
+  case 'f':
     return 15;
-  }
   default:
     return 0;
   }
