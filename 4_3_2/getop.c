@@ -1,8 +1,7 @@
 #include "getop.h"
 
 int getop(char *str) {
-  int i;
-  char c;
+  int i, c;
   i = 0;
   while((c = getch()) == ' ' || c == '\t')
     ;

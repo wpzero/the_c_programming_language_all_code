@@ -3,7 +3,8 @@
 #include <string.h>
 #define MAXBUFF 1000
 
-char buff[MAXBUFF];
+/* This structure can store EOF */
+int buff[MAXBUFF];
 int pos;
 
 char getch() {
