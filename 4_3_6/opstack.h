@@ -1,8 +1,8 @@
 #include <stdio.h>
 #define STKSIZE 100
 
-double opstack[STKSIZE];
-int oppn;
+extern double opstack[];
+extern int oppn;
 
 double pop();
 void push(double v);

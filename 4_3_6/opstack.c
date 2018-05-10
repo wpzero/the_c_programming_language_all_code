@@ -1,5 +1,8 @@
 #include "opstack.h"
 
+double opstack[STKSIZE];
+int oppn;
+
 double pop() {
   if(oppn > 0)
     return opstack[--oppn];
