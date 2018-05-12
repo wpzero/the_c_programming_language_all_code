@@ -13,6 +13,7 @@ int getint(int *ptr) {
     c = getch();
   for(*ptr = 0; isdigit(c); c = getch())
     *ptr = *ptr * 10 + (c - '0');
+  *ptr = *ptr * sign;
   if(c != EOF)
     ungetch(c);
   return c;
