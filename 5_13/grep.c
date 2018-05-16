@@ -24,8 +24,8 @@ int main(int argc, char *argv[]) {
   } else {
     f = fopen(argv[2], "r");
     if(!f) {
-      ferror(f);
-      clearerr(f);
+      perror("open");
+      return 1;
     }
   }
 
@@ -37,8 +37,10 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  if(!feof(f))
+  if(!feof(f)) {
     ferror(f);
+    return 1;
+  }
 
   for(j = 0; j < i; j++) {
     printf("%s", *(lines+j));
