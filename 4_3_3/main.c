@@ -1,3 +1,6 @@
+/* This is a simple calculator */
+/* combine multiple files to build software */
+
 #include <stdio.h>
 #include <math.h>
 #include "getch.h"
